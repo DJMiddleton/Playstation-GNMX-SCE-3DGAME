@@ -1,0 +1,93 @@
+﻿  ptHUDShader_p.pssl
+  ptHUDShader_vv.pssl
+  ptMMMShader_p.pssl
+F:\3D Graphics Assignment\Assignment\Game project\ptMMMShader_p.pssl(38,9): warning D20088: unreferenced local variable 'l_surfaceAmbientColour'
+     float3 l_surfaceAmbientColour = l_lightColour;
+            ^~~~~~~~~~~~~~~~~~~~~~                  
+  ptMMMShader_vv.pssl
+F:\3D Graphics Assignment\Assignment\Game project\ptMMMShader_vv.pssl(18,22): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_normal = mul(shc_normalTransMx, float4(_input.m_normal, 1));
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptMMMShader_vv.pssl(19,29): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_positionWorld = mul(shc_worldViewMatrix, float4(_input.m_position, 1));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptMMMShader_vv.pssl(12,15): warning D8200: 'l_output.m_originalPosition' is being used uninitialized (only the first use will be reported)
+     ptMMMVSOutput main(ptVSInput _input )
+                   ^~~~                    
+  F:\3D Graphics Assignment\Assignment\Game project\ptMMMShader_vv.pssl(2,10) : In file included at F:\3D Graphics Assignment\Assignment\Game project\ptMMMShader_vv.pssl(2,10)
+F:\3D Graphics Assignment\Assignment\Game project\ptMMMVSOutput.hs(13,30): warning D7537: vertex output 'main.m_originalPosition' was removed as it is not written to
+     float3 m_originalPosition    : ORIG_POS;
+                                    ^~~~~~~~  
+  ptTDMShader_p.pssl
+  ptTDMShader_vv.pssl
+F:\3D Graphics Assignment\Assignment\Game project\ptTDMShader_vv.pssl(24,22): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_normal = mul(shc_normalTransMx, float4(_input.m_normal, 1));
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptTDMShader_vv.pssl(25,29): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_positionWorld = mul(shc_worldViewMatrix, float4(_input.m_position, 1));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptTDMShader_vv.pssl(18,15): warning D8200: 'l_output.m_originalPosition' is being used uninitialized (only the first use will be reported)
+     ptTDMVSOutput main(ptVSInput _input )
+                   ^~~~                    
+  F:\3D Graphics Assignment\Assignment\Game project\ptTDMShader_vv.pssl(8,10) : In file included at F:\3D Graphics Assignment\Assignment\Game project\ptTDMShader_vv.pssl(8,10)
+F:\3D Graphics Assignment\Assignment\Game project\ptTDMVSOutput.hs(13,30): warning D7537: vertex output 'main.m_originalPosition' was removed as it is not written to
+     float3 m_originalPosition    : ORIG_POS;
+                                    ^~~~~~~~  
+  ptTDTShader_p.pssl
+  ptTDTShader_vv.pssl
+F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(18,22): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_normal = mul(shc_normalTransMx, float4(_input.m_normal, 1));
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(19,29): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_positionWorld = mul(shc_worldViewMatrix, float4(_input.m_position, 1));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(12,15): warning D8200: 'l_output.m_originalPosition' is being used uninitialized (only the first use will be reported)
+     ptTDTVSOutput main(ptVSInput _input )
+                   ^~~~                    
+F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(12,15): warning D8200: 'l_output.m_colour' is being used uninitialized (only the first use will be reported)
+     ptTDTVSOutput main(ptVSInput _input )
+                   ^~~~                    
+  F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(2,10) : In file included at F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(2,10)
+F:\3D Graphics Assignment\Assignment\Game project\ptTDTVSOutput.hs(13,30): warning D7537: vertex output 'main.m_originalPosition' was removed as it is not written to
+     float3 m_originalPosition    : ORIG_POS;
+                                    ^~~~~~~~  
+  F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(2,10) : In file included at F:\3D Graphics Assignment\Assignment\Game project\ptTDTShader_vv.pssl(2,10)
+F:\3D Graphics Assignment\Assignment\Game project\ptTDTVSOutput.hs(17,22): warning D7537: vertex output 'main.m_colour' was removed as it is not written to
+     float3 m_colour            : COLOUR;
+                                  ^~~~~~  
+  ptVVMShader_p.pssl
+  ptVVMShader_vv.pssl
+F:\3D Graphics Assignment\Assignment\Game project\ptVVMShader_vv.pssl(18,22): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_normal = mul(shc_normalTransMx, float4(_input.m_normal, 1));
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptVVMShader_vv.pssl(19,29): warning D6923: implicit vector type narrowing: 'float4' to 'float3'
+     l_output.m_positionWorld = mul(shc_worldViewMatrix, float4(_input.m_position, 1));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+F:\3D Graphics Assignment\Assignment\Game project\ptVVMShader_vv.pssl(12,15): warning D8200: 'l_output.m_originalPosition' is being used uninitialized (only the first use will be reported)
+     ptVVMVSOutput main(ptVSInput _input )
+                   ^~~~                    
+  F:\3D Graphics Assignment\Assignment\Game project\ptVVMShader_vv.pssl(2,10) : In file included at F:\3D Graphics Assignment\Assignment\Game project\ptVVMShader_vv.pssl(2,10)
+F:\3D Graphics Assignment\Assignment\Game project\ptVVMVSOutput.hs(13,30): warning D7537: vertex output 'main.m_originalPosition' was removed as it is not written to
+     float3 m_originalPosition    : ORIG_POS;
+                                    ^~~~~~~~  
+  Bullet.cpp
+  CollisionComponent.cpp
+  Enemy.cpp
+  ExplosionRing.cpp
+  Menu.cpp
+  Level.cpp
+  Main.cpp
+  PlayerObject.cpp
+  PtAssetManager.cpp
+  PtCamera.cpp
+  PtController.cpp
+  ptDrawManager.cpp
+  PtHUDTextItem.cpp
+  PtLight.cpp
+  PtLightEnvironment.cpp
+  PtMaterial.cpp
+  ptModel.cpp
+  PtObject.cpp
+  PtPipeline.cpp
+  Shuttle.cpp
+  Game project.vcxproj -> F:\3D Graphics Assignment\Assignment\Game project\..\..\ORBIS_Debug\Game project.elf

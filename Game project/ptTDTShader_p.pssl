@@ -1,0 +1,128 @@
+/* SIE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 04.008.061
+* Copyright (C) 2013 Sony Interactive Entertainment Inc.
+* All Rights Reserved.
+*/
+
+#include "ptTDTShaderConstants.h"
+#include "ptTDTVSOutput.hs"
+#include "PtLightCount.h"
+
+SamplerState l_samp0 : register(s0);
+Texture2D l_colourMap : register(t0);
+Texture2D l_glossMap : register(t1);
+
+float4 main(ptTDTVSOutput _input) : S_TARGET_OUTPUT
+{ 
+	//light parameters
+	float3 l_lightColour = float3(1,1,1);
+	float l_lightAmbientFactor = 0.02;
+	float3 l_lightLocationVx = float3(-1, 0, 0);
+	float l_lightDiffuseFactor = 1.0;
+	float l_lightSpecularFactor = 1;
+	bool l_lightIsInfinite = false;
+	float l_lightFixedAttenuationFactor = 0.0f;
+	float l_lightLinearAttenuationFactor = 0.0f;
+	float l_lightQuadraticAttenuationFactor = 0.25f;
+	bool l_lightIsDirectional = true;
+	float3 l_lightDirectionVx = 0;
+	float l_lightSpotAngleCos = 0.174;
+	bool isOn = true;
+	bool switchDistanceAttenuation = false;
+
+	// Material Parameters
+	float l_materialSpecularPower = shc_materialSpecularPower.x;
+	float l_materialSpecularStrength = shc_materialSpecularStrength.x;
+
+	float3 l_surfaceAmbientColour = l_lightColour;
+	float3 l_surfaceDiffuseColour = l_lightColour;
+	float3 l_surfaceSpecularColour = float3(1,1,1);
+
+	// totals
+	float3 l_ambientOutput = float3(0,0,0);
+	float3 l_diffuseOutput = float3(0,0,0);
+	float3 l_specularOutput = float3(0,0,0);
+	float3 l_totalOutput = float3(0,0,0);
+	float l_distanceAttenuation = 1.0f;
+	float l_spotAttenuation = 1.0f;
+
+	for(int i = 0; i < PT_LIGHT_COUNT; i++)
+	{
+		l_distanceAttenuation = 1.0f;
+		l_spotAttenuation = 1.0f;
+
+		l_lightAmbientFactor = shc_lightADSVx[i].x;
+		l_lightDiffuseFactor = shc_lightADSVx[i].y;
+		l_lightSpecularFactor = shc_lightADSVx[i].z;
+		isOn = shc_lightADSVx[i].w;
+
+		l_lightColour = shc_lightColourVx[i].xyz;
+
+		l_lightFixedAttenuationFactor = shc_lightAttenuationVx[i].x;
+		l_lightLinearAttenuationFactor = shc_lightAttenuationVx[i].y;
+		l_lightQuadraticAttenuationFactor = shc_lightAttenuationVx[i].z;
+		switchDistanceAttenuation = shc_lightAttenuationVx[i].w;
+
+		l_lightLocationVx = shc_lightLocationVx[i].xyz;
+		l_lightIsInfinite = shc_lightLocationVx[i].w;
+
+		l_lightSpotAngleCos = shc_lightSpotDirectionVx[i].x;
+		if(shc_lightSpotDirectionVx[i].w >= 1)
+		{
+			l_lightIsDirectional = false;
+		}
+
+		if(isOn)
+		{
+			//pre-calculations
+			float3 l_surfaceLightVx = float3 (1,0,0);
+			if (l_lightIsInfinite) 
+			{
+				l_surfaceLightVx = normalize(l_lightLocationVx);
+			}
+			else 
+			{
+				float3 t_surfaceLightVx = l_lightLocationVx - _input.m_positionWorld;
+				l_surfaceLightVx = normalize(t_surfaceLightVx);
+				float t_distance = length(t_surfaceLightVx);
+				l_distanceAttenuation = 1/(l_lightFixedAttenuationFactor + (l_lightLinearAttenuationFactor * t_distance) + (l_lightQuadraticAttenuationFactor * t_distance * t_distance));
+				if (l_lightIsDirectional)
+				{
+					float3 t_lightIncidentVx = - l_surfaceLightVx;
+					float t_cosine = dot(t_lightIncidentVx, normalize(l_lightDirectionVx));
+
+					if (t_cosine < l_lightSpotAngleCos) 
+					{
+						l_spotAttenuation = 0;
+					}
+				}
+			}
+
+			float l_diffuseIntensity = dot( l_surfaceLightVx, normalize(_input.m_normal));
+			//ambient
+			l_ambientOutput += saturate(l_colourMap.Sample(l_samp0, _input.m_texcoord) * l_lightAmbientFactor * l_spotAttenuation * l_surfaceAmbientColour);
+
+			//diffuse
+			l_diffuseOutput += saturate(l_colourMap.Sample(l_samp0, _input.m_texcoord) * l_lightColour * l_diffuseIntensity * l_lightDiffuseFactor * l_spotAttenuation * l_surfaceDiffuseColour);
+
+
+			if(l_glossMap.Sample(l_samp0, _input.m_texcoord).r < 0.01 && l_glossMap.Sample(l_samp0, _input.m_texcoord).g < 0.01 && l_glossMap.Sample(l_samp0, _input.m_texcoord).b < 0.01)
+			{
+				// specular
+				if (l_diffuseIntensity > 0)
+				{
+					float3 t_lightIncidentVx = - l_surfaceLightVx;
+					float3 t_reflectedVx = normalize(reflect(t_lightIncidentVx, _input.m_normal));
+					float3 t_vertexToCameraVx = normalize(shc_cameraPositionWorldVx.xyz -  _input.m_positionWorld);
+					float t_specularIntensity = saturate(dot(t_reflectedVx, t_vertexToCameraVx));
+					t_specularIntensity = l_materialSpecularStrength * pow(t_specularIntensity, l_materialSpecularPower);
+					l_specularOutput += saturate(t_specularIntensity * l_lightSpecularFactor * l_spotAttenuation * l_surfaceSpecularColour);
+				}
+			}
+
+			// totals
+			l_totalOutput = l_totalOutput + saturate(l_ambientOutput + l_diffuseOutput + l_specularOutput);
+		}
+	}
+	return float4(l_totalOutput, 1.0f);
+}//main()

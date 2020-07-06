@@ -1,0 +1,14 @@
+#ifndef __PT_PIPELINE_TYPES__
+#define __PT_PIPELINE_TYPES__
+
+enum PtPipelines
+{
+	TDM_PIPELINE,
+	VVM_PIPELINE,
+	MMM_PIPELINE,
+	TDT_PIPELINE,
+	HUD_PIPELINE,
+	PT_PIPELINE_COUNT
+};
+
+#endif

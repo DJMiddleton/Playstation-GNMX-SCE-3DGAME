@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="C++">
+      <UniqueIdentifier>{0c47249d-7e17-4411-bdc3-2ac5bd0803da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{c17d763d-7167-41f2-b638-1fa035878bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;cc;s;asm</Extensions>
+    </Filter>
+    <Filter Include="C++\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp</Extensions>
+    </Filter>
+    <Filter Include="PSSL">
+      <UniqueIdentifier>{e57bd433-6b95-4efe-bc41-8c8c4830afad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PSSL\Header Files 2">
+      <UniqueIdentifier>{4a27c45c-4c0d-42ee-980d-079934cc646b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PSSL\Source Files 2">
+      <UniqueIdentifier>{e9e0d39f-f921-4861-b9ac-4a536441e9fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines">
+      <UniqueIdentifier>{c26420dd-0f52-4c1d-abc3-1177218f5e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines\TDM">
+      <UniqueIdentifier>{62de5e6c-52d3-4061-9d46-272f28e3e1c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines\VVM">
+      <UniqueIdentifier>{1516c914-974d-47cb-9aff-48ebe085bfe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines\MMM">
+      <UniqueIdentifier>{1a27121a-dbe8-41c3-a513-b315c518138e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines\TDT">
+      <UniqueIdentifier>{9821c3b5-31aa-40cb-a83d-049e33021193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pipelines\HUD">
+      <UniqueIdentifier>{e523e9ce-ec66-4eff-b186-599e676e3fa7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ptModel.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ptDrawManager.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtController.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtCamera.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtObject.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtAssetManager.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtLight.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtLightEnvironment.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtPipeline.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtMaterial.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PtHUDTextItem.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerObject.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionComponent.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shuttle.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionRing.cpp">
+      <Filter>C++\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <WavePsslc Include="ptTDMShader_p.pssl">
+      <Filter>Pipelines\TDM</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptTDMShader_vv.pssl">
+      <Filter>Pipelines\TDM</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptVVMShader_p.pssl">
+      <Filter>Pipelines\VVM</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptVVMShader_vv.pssl">
+      <Filter>Pipelines\VVM</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptMMMShader_p.pssl">
+      <Filter>Pipelines\MMM</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptMMMShader_vv.pssl">
+      <Filter>Pipelines\MMM</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptTDTShader_p.pssl">
+      <Filter>Pipelines\TDT</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptTDTShader_vv.pssl">
+      <Filter>Pipelines\TDT</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptHUDShader_p.pssl">
+      <Filter>Pipelines\HUD</Filter>
+    </WavePsslc>
+    <WavePsslc Include="ptHUDShader_vv.pssl">
+      <Filter>Pipelines\HUD</Filter>
+    </WavePsslc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptHardModels.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptVertex.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptModel.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modelTypes.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptDrawManager.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtController.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtCamera.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtObject.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectsEnum.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelsEnum.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtAssetManager.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtAssetTypes.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtTexture.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturesEnum.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtLight.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtLightCount.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtLightEnvironment.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptTDMShaderConstants.h">
+      <Filter>Pipelines\TDM</Filter>
+    </ClInclude>
+    <ClInclude Include="PtAllShaderConstants.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtPipeline.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtPipelineTypes.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtMaterial.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtMaterials.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PtHUDTextItem.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptVVMShaderConstants.h">
+      <Filter>Pipelines\VVM</Filter>
+    </ClInclude>
+    <ClInclude Include="ptMMMShaderConstants.h">
+      <Filter>Pipelines\MMM</Filter>
+    </ClInclude>
+    <ClInclude Include="ptTDTShaderConstants.h">
+      <Filter>Pipelines\TDT</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerObject.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionComponent.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="3DCube.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenStates.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HUDObjects.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TieFighterTargets.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shuttle.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosionRing.h">
+      <Filter>C++\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game project.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ptTDMVSOutput.hs">
+      <Filter>Pipelines\TDM</Filter>
+    </None>
+    <None Include="ptVVMVsOutput.hs">
+      <Filter>Pipelines\VVM</Filter>
+    </None>
+    <None Include="ptMMMVsOutput.hs">
+      <Filter>Pipelines\MMM</Filter>
+    </None>
+    <None Include="ptTDTVsOutput.hs">
+      <Filter>Pipelines\TDT</Filter>
+    </None>
+    <None Include="ptHUDVsOutput.hs">
+      <Filter>Pipelines\HUD</Filter>
+    </None>
+  </ItemGroup>
+</Project>

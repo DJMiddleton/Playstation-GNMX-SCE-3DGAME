@@ -1,0 +1,22 @@
+/* SIE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 04.008.061
+* Copyright (C) 2013 Sony Interactive Entertainment Inc.
+* All Rights Reserved.
+*/
+
+#include "ptTDMShaderConstants.h"
+#include "ptHUDVsOutput.hs"
+#include "PtLightCount.h"
+
+SamplerState l_samp0 : register(s0);
+Texture2D l_colourMap : register(t0);
+
+float4 main(ptHUDVSOutput _input) : S_TARGET_OUTPUT
+{ 
+	if(l_colourMap.Sample(l_samp0, _input.m_texcoord).b < 0.1)
+	{
+		discard;
+	}
+
+	return float4(l_colourMap.Sample(l_samp0, _input.m_texcoord));
+}//main()

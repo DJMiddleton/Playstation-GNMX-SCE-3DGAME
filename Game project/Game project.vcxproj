@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ORBIS">
+      <Configuration>Debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ORBIS">
+      <Configuration>Release</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CollisionComponent.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="ExplosionRing.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PlayerObject.cpp" />
+    <ClCompile Include="PtAssetManager.cpp" />
+    <ClCompile Include="PtCamera.cpp" />
+    <ClCompile Include="PtController.cpp" />
+    <ClCompile Include="ptDrawManager.cpp" />
+    <ClCompile Include="PtHUDTextItem.cpp" />
+    <ClCompile Include="PtLight.cpp" />
+    <ClCompile Include="PtLightEnvironment.cpp" />
+    <ClCompile Include="PtMaterial.cpp" />
+    <ClCompile Include="ptModel.cpp" />
+    <ClCompile Include="PtObject.cpp" />
+    <ClCompile Include="PtPipeline.cpp" />
+    <ClCompile Include="Shuttle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <WavePsslc Include="ptHUDShader_p.pssl" />
+    <WavePsslc Include="ptHUDShader_vv.pssl" />
+    <WavePsslc Include="ptMMMShader_p.pssl" />
+    <WavePsslc Include="ptMMMShader_vv.pssl" />
+    <WavePsslc Include="ptTDMShader_p.pssl" />
+    <WavePsslc Include="ptTDMShader_vv.pssl" />
+    <WavePsslc Include="ptTDTShader_p.pssl" />
+    <WavePsslc Include="ptTDTShader_vv.pssl" />
+    <WavePsslc Include="ptVVMShader_p.pssl" />
+    <WavePsslc Include="ptVVMShader_vv.pssl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3DCube.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="CollisionComponent.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="ExplosionRing.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="HUDObjects.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="PlayerObject.h" />
+    <ClInclude Include="PtAllShaderConstants.h" />
+    <ClInclude Include="PtHUDTextItem.h" />
+    <ClInclude Include="PtLight.h" />
+    <ClInclude Include="PtLightCount.h" />
+    <ClInclude Include="PtLightEnvironment.h" />
+    <ClInclude Include="PtMaterial.h" />
+    <ClInclude Include="PtMaterials.h" />
+    <ClInclude Include="ptMMMShaderConstants.h" />
+    <ClInclude Include="PtPipeline.h" />
+    <ClInclude Include="PtPipelineTypes.h" />
+    <ClInclude Include="ptTDTShaderConstants.h" />
+    <ClInclude Include="PtTexture.h" />
+    <ClInclude Include="ModelsEnum.h" />
+    <ClInclude Include="modelTypes.h" />
+    <ClInclude Include="ObjectsEnum.h" />
+    <ClInclude Include="PtAssetManager.h" />
+    <ClInclude Include="PtAssetTypes.h" />
+    <ClInclude Include="PtCamera.h" />
+    <ClInclude Include="PtController.h" />
+    <ClInclude Include="ptDrawManager.h" />
+    <ClInclude Include="ptHardModels.h" />
+    <ClInclude Include="ptModel.h" />
+    <ClInclude Include="PtObject.h" />
+    <ClInclude Include="ptTDMShaderConstants.h" />
+    <ClInclude Include="ptVertex.h" />
+    <ClInclude Include="ptVVMShaderConstants.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ScreenStates.h" />
+    <ClInclude Include="Shuttle.h" />
+    <ClInclude Include="TexturesEnum.h" />
+    <ClInclude Include="TieFighterTargets.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ptHUDVsOutput.hs" />
+    <None Include="ptMMMVsOutput.hs" />
+    <None Include="ptTDMVSOutput.hs" />
+    <None Include="ptTDTVsOutput.hs" />
+    <None Include="ptVVMVsOutput.hs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game project.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\toolkit\toolkit.vcxproj">
+      <Project>{2f4ccf89-7649-4c7f-8cbf-f976b4fbc2b6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CC38866F-14A4-4A82-9D38-D96D9200005F}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(DebuggerFlavor)'=='ORBISDebugger'" Label="OverrideDebuggerDefaults">
+    <!--LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand-->
+    <!--LocalDebuggerCommandArguments></LocalDebuggerCommandArguments-->
+    <!--LocalDebuggerTarget></LocalDebuggerTarget-->
+    <!--LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory-->
+    <!--LocalRunCommandLine></LocalRunCommandLine-->
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props" />
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\SCU.props')" Project="$(VCTargetsPath)\BuildCustomizations\SCU.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <OutDir>..\..\$(Platform)_$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>-lSceSystemService_stub;-lSceGnmDriver_stub_weak;-lScePm4Dump;-lSceShaderBinary;-lSceGpuAddress;-lSceGnmx_debug;-lSceGnm_debug;-lScePosix_stub_weak;-lSceVideoOut_stub_weak;-lScePad_stub_weak;-lSceUserService_stub_weak;-lSceGnf;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets" />
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\SCU.targets')" Project="$(VCTargetsPath)\BuildCustomizations\SCU.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,28 @@
+﻿/* SIE CONFIDENTIAL
+PlayStation(R)4 Programmer Tool Runtime Library Release 04.008.061
+* Copyright (C) 2013 Sony Interactive Entertainment Inc.
+* All Rights Reserved.
+*/
+
+#include "ptTDMShaderConstants.h"
+#include "ptTDMVSOutput.hs"
+
+struct ptVSInput
+{
+	float3 m_position		: POSITION0;
+	float3 m_colour			: COLOR0;
+	float3 m_normal			: NORMAL0;
+	float2 m_texcoord		: TEXCOORD0;
+};//struct
+
+ptTDMVSOutput main(ptVSInput _input )
+{
+	ptTDMVSOutput l_output;
+
+	l_output.m_texcoord = _input.m_texcoord;
+	l_output.m_position = mul(shc_modelProjMx, float4(_input.m_position, 1));
+	l_output.m_normal = mul(shc_normalTransMx, float4(_input.m_normal, 1));
+	l_output.m_positionWorld = mul(shc_worldViewMatrix, float4(_input.m_position, 1));
+
+	return l_output;
+}//main()
