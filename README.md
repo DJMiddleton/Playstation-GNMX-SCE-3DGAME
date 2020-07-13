@@ -1,5 +1,5 @@
 # Playstation-GNMX-SCE-3DGAME
-I develop a 3-D game for the Playstation 4 using the Playstation DevKit with Sony's GNMX API and PSSL (Playstation Shader Language). I use the Playstations native language C++ extensively. 
+I develop a 3-D game for the Playstation 4 using the Playstation DevKit with Sony's GNMX API and PSSL (Playstation Shader Language). I use the Playstation's native language C++ extensively. 
 
 This repository is missing vital parts of the game program for its functioning such as the ORBIS_DEBUG and toolkit packages and various required game assets. As such this repository serves only as future reference for the creator, Dan Middleton. 
 
